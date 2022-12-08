@@ -1,7 +1,9 @@
 # Changelog
 
-All notable changes to `whatsapp` will be documented in this file
+All notable changes will be documented in this file
 
-## 1.0.0 - 201X-XX-XX
+## Unreleased
 
-- initial release
+## 0.1.0 - 2022-12-08
+
+- Initial release
