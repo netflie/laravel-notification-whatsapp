@@ -1,4 +1,4 @@
-name: Tests
+name: PHP
 
 on:
   - push
@@ -23,13 +23,23 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           tools: composer:v2, phpstan
-          coverage: none
+          coverage: pcov
 
       - name: Install dependencies
         run: composer update --prefer-source --no-interaction --no-progress
 
+      - name: Lint composer.json
+        run: composer validate
+
       - name: Execute tests
-        run: vendor/bin/phpunit --verbose
+        run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+
+      - name: Upload Coverage to Scrutinizer
+        run: |
+          wget https://scrutinizer-ci.com/ocular.phar
+          php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+        # Disable on PHP 8 as Ocular isn't supported
+        if: matrix.php < 8
 
       - name: Run PHPStan
         run: phpstan analyse src --level=5
