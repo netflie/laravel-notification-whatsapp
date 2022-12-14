@@ -31,7 +31,7 @@ This package uses the [whatsapp-cloud-api](https://github.com/netflie/whatsapp-c
 
 You can install the package via composer:
 ```
-composer require laravel-notification-channels/whatsapp
+composer require netflie/laravel-notification-whatsapp
 ```
 ### Setting up the WhatsApp Cloud API
 
