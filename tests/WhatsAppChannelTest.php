@@ -133,7 +133,7 @@ final class WhatsAppChannelTest extends TestCase
         RawResponse $expectedResponse
     ) {
         $this->httpClient
-            ->shouldReceive('send')
+            ->shouldReceive('postJsonData')
             ->once()
             ->andReturns($expectedResponse);
 
