@@ -48,10 +48,26 @@ final class ComponentTest extends TestCase
     }
 
     /** @test */
-    public function it_can_return_a_vide_component()
+    public function it_can_return_a_video_component()
     {
         $component = Component::video('https://www.netflie.es/my_image.webm');
 
         $this->assertInstanceOf(Component\Video::class, $component);
+    }
+
+    /** @test */
+    public function it_can_return_a_url_button_component()
+    {
+        $component = Component::urlButton(['event/01']);
+
+        $this->assertInstanceOf(Component\UrlButton::class, $component);
+    }
+
+    /** @test */
+    public function it_can_return_a_quick_reply_button_component()
+    {
+        $component = Component::quickReplyButton(['Thanks for your message!']);
+
+        $this->assertInstanceOf(Component\QuickReplyButton::class, $component);
     }
 }

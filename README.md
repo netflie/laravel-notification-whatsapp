@@ -71,7 +71,7 @@ Whatsapp forces you to configure your templates before using them. You can learn
 
 ### WhatsApp templates sections
 
-A template is divided into 4 sections: header, body, footer and buttons. The header, body and buttons accept variables. The footer doesn't accept variables. You can only send variables from this package for the header and body. Support for sending variables for buttons has not yet been added.
+A template is divided into 4 sections: header, body, footer and buttons. The header, body and buttons accept variables. The footer doesn't accept variables. You can only send variables from this package for the header and body.
 
 ### Components
 
@@ -88,11 +88,14 @@ Component::document($link);
 Component::image($link);
 Component::video($link);
 Component::text($text);
+Component::urlButton($array_of_urls);
+Component::quickReplyButton($array_of_payloads);
 ```
 Components supported by Whatsapp template sections:
 
  - Header: image, video, document and text (the text accepts currency, datetime and text variables)
  - Body: currency, datetime and text
+ - Buttons: url and quick reply, 
 
 ### Send a notification
 
@@ -130,6 +133,8 @@ class MovieTicketPaid extends Notification
             ->body(Component::dateTime(new \DateTimeImmutable))
             ->body(Component::text('Star Wars'))
             ->body(Component::text('5'))
+            ->buttons(Component::quickReplyButton(['Thanks for your reply!']))
+            ->buttons(Component::urlButton(['reply/01234'])) // List of url suffixes
             ->to('34676010101');
     }
 }

@@ -36,4 +36,14 @@ class Component
     {
         return new Component\Video($link);
     }
+
+    public static function urlButton(array $urls): Component\UrlButton
+    {
+        return new Component\UrlButton($urls);
+    }
+
+    public static function quickReplyButton(array $payloads): Component\QuickReplyButton
+    {
+        return new Component\QuickReplyButton($payloads);
+    }
 }
