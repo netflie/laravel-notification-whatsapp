@@ -13,8 +13,11 @@ class Document extends Component
      * Only PDF documents are supported.
      */
     protected string $link;
-
-    public function __construct(string $link)
+    
+    /**
+     * File name to be used for file
+     */
+    public function __construct(string $link, ?string $filename = null)
     {
         if (filter_var($link, FILTER_VALIDATE_URL) === false) {
             throw new UnsupportedMediaValue($link, 'document', 'Link is not a valid URL');
@@ -27,14 +30,16 @@ class Document extends Component
         }
 
         $this->link = $link;
+        $this->filename = $filename;
     }
 
     public function toArray(): array
     {
         return [
             'type' => 'document',
-            'document' => [
+            'document' => array_filter[
                 'link' => $this->link,
+                'filename' => $this->filename
             ],
         ];
     }
