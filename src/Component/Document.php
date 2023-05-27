@@ -17,6 +17,8 @@ class Document extends Component
     /**
      * File name to be used for file
      */
+    protected string $filename;
+    
     public function __construct(string $link, ?string $filename = null)
     {
         if (filter_var($link, FILTER_VALIDATE_URL) === false) {
@@ -37,10 +39,10 @@ class Document extends Component
     {
         return [
             'type' => 'document',
-            'document' => array_filter[
+            'document' => array_filter([
                 'link' => $this->link,
                 'filename' => $this->filename
-            ],
+            ]),
         ];
     }
 }
