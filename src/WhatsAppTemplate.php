@@ -3,6 +3,7 @@
 namespace NotificationChannels\WhatsApp;
 
 use Netflie\WhatsAppCloudApi\Message\Template\Component as CloudApiComponent;
+use NotificationChannels\WhatsApp\Component\Button;
 use NotificationChannels\WhatsApp\Component\Component;
 
 class WhatsAppTemplate
@@ -39,6 +40,7 @@ class WhatsAppTemplate
         $this->components = [
             'header' => [],
             'body' => [],
+            'buttons' => [],
         ];
     }
 
@@ -101,8 +103,18 @@ class WhatsAppTemplate
     {
         return new CloudApiComponent(
             $this->components['header'],
-            $this->components['body']
+            $this->components['body'],
+            $this->components['buttons']
         );
+    }
+
+    public function buttons(Button $component): self
+    {
+        $buttons = $this->components['buttons'];
+        $component->setIndex(count($buttons));
+        $this->components['buttons'][] = $component->toArray();
+
+        return $this;
     }
 
     public function hasRecipient(): bool

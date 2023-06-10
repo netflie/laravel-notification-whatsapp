@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\WhatsApp\Test;
+namespace NotificationChannels\WhatsApp\Test\Component;
 
 use NotificationChannels\WhatsApp\Component\Currency;
 use PHPUnit\Framework\TestCase;
