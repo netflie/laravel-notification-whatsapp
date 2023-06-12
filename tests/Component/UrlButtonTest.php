@@ -10,7 +10,7 @@ final class UrlButtonTest extends TestCase
     /** @test */
     public function url_button_is_valid()
     {
-        $button = new UrlButton(['event','01']);
+        $button = new UrlButton(['event', '01']);
         $expectedValue = [
             'type' => 'button',
             'sub_type' => 'url',
@@ -18,13 +18,13 @@ final class UrlButtonTest extends TestCase
             'parameters' => [
                 [
                     'type' => 'text',
-                    'text' => 'event'
+                    'text' => 'event',
                 ],
                 [
                     'type' => 'text',
-                    'text' => '01'
-                ]
-            ]
+                    'text' => '01',
+                ],
+            ],
         ];
 
         $this->assertEquals($expectedValue, $button->toArray());

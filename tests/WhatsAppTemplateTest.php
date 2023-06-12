@@ -92,8 +92,8 @@ final class WhatsAppTemplateTest extends TestCase
     public function the_notification_component_buttons_can_be_set()
     {
         $message = WhatsAppTemplate::create()
-            ->buttons(new QuickReplyButton(['Thanks for your message!','We will reply shortly']))
-            ->buttons(new UrlButton(['event','01']));
+            ->buttons(new QuickReplyButton(['Thanks for your message!', 'We will reply shortly']))
+            ->buttons(new UrlButton(['event', '01']));
 
         $expectedButtonsStructure = [
             [
@@ -103,13 +103,13 @@ final class WhatsAppTemplateTest extends TestCase
                 'parameters' => [
                     [
                         'type' => 'payload',
-                        'payload' => 'Thanks for your message!'
+                        'payload' => 'Thanks for your message!',
                     ],
                     [
                         'type' => 'payload',
-                        'payload' => 'We will reply shortly'
-                    ]
-                ]
+                        'payload' => 'We will reply shortly',
+                    ],
+                ],
             ],
             [
                 'type' => 'button',
@@ -118,14 +118,14 @@ final class WhatsAppTemplateTest extends TestCase
                 'parameters' => [
                     [
                         'type' => 'text',
-                        'text' => 'event'
+                        'text' => 'event',
                     ],
                     [
                         'type' => 'text',
-                        'text' => '01'
-                    ]
-                ]
-            ]
+                        'text' => '01',
+                    ],
+                ],
+            ],
         ];
 
         $this->assertEquals($expectedButtonsStructure, $message->components()->buttons());
