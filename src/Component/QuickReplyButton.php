@@ -2,14 +2,14 @@
 
 namespace NotificationChannels\WhatsApp\Component;
 
-class QuickReplyButton extends Button {
-
+class QuickReplyButton extends Button
+{
     public function __construct(array $payloads)
     {
-        foreach($payloads as $payload){
+        foreach ($payloads as $payload) {
             $this->parameters[] = [
                 'type' => 'payload',
-                'payload' => $payload
+                'payload' => $payload,
             ];
         }
     }

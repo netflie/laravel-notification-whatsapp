@@ -10,7 +10,7 @@ final class QuickReplyButtonTest extends TestCase
     /** @test */
     public function quick_reply_button_is_valid()
     {
-        $button = new QuickReplyButton(['Thanks for your message!','We will reply shortly']);
+        $button = new QuickReplyButton(['Thanks for your message!', 'We will reply shortly']);
         $expectedValue = [
             'type' => 'button',
             'sub_type' => 'quick_reply',
@@ -18,13 +18,13 @@ final class QuickReplyButtonTest extends TestCase
             'parameters' => [
                 [
                     'type' => 'payload',
-                    'payload' => 'Thanks for your message!'
+                    'payload' => 'Thanks for your message!',
                 ],
                 [
                     'type' => 'payload',
-                    'payload' => 'We will reply shortly'
-                ]
-            ]
+                    'payload' => 'We will reply shortly',
+                ],
+            ],
         ];
 
         $this->assertEquals($expectedValue, $button->toArray());

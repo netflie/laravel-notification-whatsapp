@@ -13,7 +13,7 @@ abstract class Button extends Component
             'type' => 'button',
             'sub_type' => $this->subType(), // quick_reply|url
             'index' => $this->index,
-            'parameters' => $this->parameters
+            'parameters' => $this->parameters,
         ];
     }
 
@@ -25,9 +25,10 @@ abstract class Button extends Component
      * We don't do the validation.
      * It's up to the user to follow this guideline
      */
-    public function setIndex(int $index){
+    public function setIndex(int $index)
+    {
         $this->index = $index;
     }
 
-    public abstract function subType(): string;
+    abstract public function subType(): string;
 }
