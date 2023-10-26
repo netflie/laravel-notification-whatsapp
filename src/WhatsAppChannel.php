@@ -13,11 +13,9 @@ class WhatsAppChannel
     /*
      * HTTP WhatsApp Cloud API wrapper
      */
-    private WhatsAppCloudApi $whatsapp;
 
-    public function __construct(WhatsAppCloudApi $whatsapp)
+    public function __construct(private WhatsAppCloudApi $whatsapp)
     {
-        $this->whatsapp = $whatsapp;
     }
 
     /**

@@ -4,17 +4,12 @@ namespace NotificationChannels\WhatsApp\Component;
 
 class Currency extends Component
 {
-    protected float $amount;
-
     /**
-     * Currency code as defined in ISO 4217.
+     * @param float  $amount
+     * @param string $code   Currency code as defined in ISO 4217.
      */
-    protected string $code;
-
-    public function __construct(float $amount, string $code = 'EUR')
+    public function __construct(protected float $amount,protected string $code = 'EUR')
     {
-        $this->amount = $amount;
-        $this->code = $code;
     }
 
     public function toArray(): array

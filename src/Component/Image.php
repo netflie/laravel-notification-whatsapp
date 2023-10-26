@@ -5,13 +5,11 @@ namespace NotificationChannels\WhatsApp\Component;
 class Image extends Component
 {
     /**
+     * @param string $link
      * Link to the image; e.g. https://URL.
      */
-    protected string $link;
-
-    public function __construct(string $link)
+    public function __construct(protected string $link)
     {
-        $this->link = $link;
     }
 
     public function toArray(): array
