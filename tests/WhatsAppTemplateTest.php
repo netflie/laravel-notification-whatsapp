@@ -5,7 +5,9 @@ namespace NotificationChannels\WhatsApp\Test;
 use NotificationChannels\WhatsApp\Component\Currency;
 use NotificationChannels\WhatsApp\Component\Document;
 use NotificationChannels\WhatsApp\Component\Image;
+use NotificationChannels\WhatsApp\Component\QuickReplyButton;
 use NotificationChannels\WhatsApp\Component\Text;
+use NotificationChannels\WhatsApp\Component\UrlButton;
 use NotificationChannels\WhatsApp\Component\Video;
 use NotificationChannels\WhatsApp\WhatsAppTemplate;
 use PHPUnit\Framework\TestCase;
@@ -84,5 +86,48 @@ final class WhatsAppTemplateTest extends TestCase
         ];
 
         $this->assertEquals($expectedHeader, $message->components()->body());
+    }
+
+    /** @test */
+    public function the_notification_component_buttons_can_be_set()
+    {
+        $message = WhatsAppTemplate::create()
+            ->buttons(new QuickReplyButton(['Thanks for your message!', 'We will reply shortly']))
+            ->buttons(new UrlButton(['event', '01']));
+
+        $expectedButtonsStructure = [
+            [
+                'type' => 'button',
+                'sub_type' => 'quick_reply',
+                'index' => '0',
+                'parameters' => [
+                    [
+                        'type' => 'payload',
+                        'payload' => 'Thanks for your message!',
+                    ],
+                    [
+                        'type' => 'payload',
+                        'payload' => 'We will reply shortly',
+                    ],
+                ],
+            ],
+            [
+                'type' => 'button',
+                'sub_type' => 'url',
+                'index' => '1',
+                'parameters' => [
+                    [
+                        'type' => 'text',
+                        'text' => 'event',
+                    ],
+                    [
+                        'type' => 'text',
+                        'text' => '01',
+                    ],
+                ],
+            ],
+        ];
+
+        $this->assertEquals($expectedButtonsStructure, $message->components()->buttons());
     }
 }

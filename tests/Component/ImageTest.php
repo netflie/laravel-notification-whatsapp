@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\WhatsApp\Test;
+namespace NotificationChannels\WhatsApp\Test\Component;
 
 use NotificationChannels\WhatsApp\Component\Image;
 use PHPUnit\Framework\TestCase;

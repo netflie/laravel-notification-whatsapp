@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\WhatsApp\Test;
+namespace NotificationChannels\WhatsApp\Test\Component;
 
 use NotificationChannels\WhatsApp\Component\Document;
 use NotificationChannels\WhatsApp\Exceptions\UnsupportedMediaValue;
