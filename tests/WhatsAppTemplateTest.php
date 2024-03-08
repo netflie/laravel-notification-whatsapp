@@ -56,7 +56,7 @@ final class WhatsAppTemplateTest extends TestCase
             ],
             [
                 'type' => 'document',
-                'document' => ['link' => 'https://netflie.es/document.pdf'],
+                'document' => ['link' => 'https://netflie.es/document.pdf', 'filename' => 'document'],
             ],
             [
                 'type' => 'video',
