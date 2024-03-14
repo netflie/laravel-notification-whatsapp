@@ -90,6 +90,7 @@ Component::video($link);
 Component::text($text);
 Component::urlButton($array_of_urls);
 Component::quickReplyButton($array_of_payloads);
+Component::flowButton($flow_token, $array_of_data);
 ```
 Components supported by Whatsapp template sections:
 
