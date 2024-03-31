@@ -32,6 +32,11 @@ class WhatsAppTemplate
      */
     protected array $components;
 
+    /**
+     * The message type.
+     */
+    protected static string $type = 'template';
+
     protected function __construct($to = '', $name = '', $language = 'en_US')
     {
         $this->to = $to;
@@ -120,5 +125,10 @@ class WhatsAppTemplate
     public function hasRecipient(): bool
     {
         return ! empty($this->to);
+    }
+
+    public function type(): string
+    {
+        return self::$type;
     }
 }

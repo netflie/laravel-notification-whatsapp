@@ -40,6 +40,12 @@ class WhatsAppChannel
         }
 
         try {
+            if ($message->type() === 'text') {
+                return $this->whatsapp->sendTextMessage(
+                    $message->recipient(),
+                    $message->getMessage()
+                );
+            }
             return $this->whatsapp->sendTemplate(
                 $message->recipient(),
                 $message->configuredName(),
