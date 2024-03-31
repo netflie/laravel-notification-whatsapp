@@ -46,6 +46,7 @@ class WhatsAppChannel
                     $message->getMessage()
                 );
             }
+
             return $this->whatsapp->sendTemplate(
                 $message->recipient(),
                 $message->configuredName(),

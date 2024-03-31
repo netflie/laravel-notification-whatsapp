@@ -2,10 +2,6 @@
 
 namespace NotificationChannels\WhatsApp;
 
-use Netflie\WhatsAppCloudApi\Message\Template\Component as CloudApiComponent;
-use NotificationChannels\WhatsApp\Component\Button;
-use NotificationChannels\WhatsApp\Component\Component;
-
 class WhatsAppTextMessage
 {
     /**
@@ -22,7 +18,6 @@ class WhatsAppTextMessage
      * The message type.
      */
     protected static string $type = 'text';
-
 
     protected function __construct($to = '', $message = '')
     {

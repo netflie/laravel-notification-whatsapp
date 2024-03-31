@@ -4,7 +4,6 @@ namespace NotificationChannels\WhatsApp;
 
 use Illuminate\Support\ServiceProvider;
 use Netflie\WhatsAppCloudApi\WhatsAppCloudApi;
-use Netflie\WhatsAppCloudApi\WebHook;
 
 class WhatsAppServiceProvider extends ServiceProvider
 {
