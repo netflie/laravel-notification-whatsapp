@@ -3,7 +3,6 @@
 namespace NotificationChannels\WhatsApp\Test\Component;
 
 use NotificationChannels\WhatsApp\Component\FlowButton;
-use NotificationChannels\WhatsApp\Component\UrlButton;
 use PHPUnit\Framework\TestCase;
 
 final class FlowButtonTest extends TestCase
@@ -23,10 +22,10 @@ final class FlowButtonTest extends TestCase
                     'action' => [
                         'flow_token' => 'token',
                         'flow_action_data' => [
-                            'test' => 'example'
-                        ]
-                    ]
-                ]
+                            'test' => 'example',
+                        ],
+                    ],
+                ],
             ],
         ];
 
