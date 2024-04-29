@@ -46,4 +46,9 @@ class Component
     {
         return new Component\QuickReplyButton($payloads);
     }
+
+    public static function flowButton(string $token, array $data): Component\FlowButton
+    {
+        return new Component\FlowButton($token, $data);
+    }
 }

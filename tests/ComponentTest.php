@@ -70,4 +70,12 @@ final class ComponentTest extends TestCase
 
         $this->assertInstanceOf(Component\QuickReplyButton::class, $component);
     }
+
+    /** @test */
+    public function it_can_return_a_flow_reply_button_component()
+    {
+        $component = Component::flowButton('token', ['example' => 'test']);
+
+        $this->assertInstanceOf(Component\FlowButton::class, $component);
+    }
 }
