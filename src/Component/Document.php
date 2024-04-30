@@ -15,7 +15,7 @@ class Document extends Component
     protected string $link;
 
     /**
-     * File name to be used for file
+     * File name to be used for file.
      */
     protected string $filename;
 
@@ -41,7 +41,7 @@ class Document extends Component
             'type' => 'document',
             'document' => [
                 'link' => $this->link,
-                'filename' => $this->filename
+                'filename' => $this->filename,
             ],
         ];
     }
