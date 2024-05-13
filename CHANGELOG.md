@@ -2,7 +2,7 @@
 
 All notable changes will be documented in this file
 
-## 1.3.0 - 2024-05-XX
+## 1.4.0 - 2024-05-XX
 
 ### What's Changed
 
