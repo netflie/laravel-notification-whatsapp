@@ -2,6 +2,18 @@
 
 All notable changes will be documented in this file
 
+## 1.4.0 - 2024-05-XX
+
+### What's Changed
+
+* Add 'Location' component by [Indianos](https://github.com/Indianos)
+
+### New Contributors
+
+* [Indianos](https://github.com/Indianos) made their first contribution
+
+### Full Changelog
+
 ## 1.3.0 - 2024-04-29
 
 ### What's Changed
