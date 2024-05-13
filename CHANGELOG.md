@@ -6,11 +6,11 @@ All notable changes will be documented in this file
 
 ### What's Changed
 
-* Add 'Location' component by @Indianos
+* Add 'Location' component by [Indianos](https://github.com/Indianos)
 
 ### New Contributors
 
-* @Indianos made their first contribution
+* [Indianos](https://github.com/Indianos) made their first contribution
 
 ### Full Changelog
 
