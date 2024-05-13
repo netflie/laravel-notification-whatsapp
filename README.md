@@ -91,12 +91,13 @@ Component::text($text);
 Component::urlButton($array_of_urls);
 Component::quickReplyButton($array_of_payloads);
 Component::flowButton($flow_token, $array_of_data);
+Component::location($name, $address, $latitude, $longitude);
 ```
 Components supported by Whatsapp template sections:
 
- - Header: image, video, document and text (the text accepts currency, datetime and text variables)
+ - Header: image, video, document, location and text (the text accepts currency, datetime and text variables)
  - Body: currency, datetime and text
- - Buttons: url and quick reply, 
+ - Buttons: url and quick reply
 
 ### Send a notification from a template
 
