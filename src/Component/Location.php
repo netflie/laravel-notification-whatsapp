@@ -28,12 +28,12 @@ class Location extends Component
     public function toArray(): array
     {
         return [
-            "type" => "location",
-            "location"=> [
-                "latitude" => (string)$this->latitude,
-                "longitude" => (string)$this->longitude,
-                "name" => $this->name,
-                "address" => $this->address,
+            'type' => 'location',
+            'location' => [
+                'latitude' => (string) $this->latitude,
+                'longitude' => (string) $this->longitude,
+                'name' => $this->name,
+                'address' => $this->address,
             ],
         ];
     }

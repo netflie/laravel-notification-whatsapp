@@ -19,8 +19,8 @@ final class LocationTest extends TestCase
         $expectedValue = [
             'type' => 'location',
             'location' => [
-                'latitude' => (string)$latitude,
-                'longitude' => (string)$longitude,
+                'latitude' => (string) $latitude,
+                'longitude' => (string) $longitude,
                 'name' => $name,
                 'address' => $address,
             ],
