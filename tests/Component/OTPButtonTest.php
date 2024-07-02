@@ -14,12 +14,12 @@ final class OTPButtonTest extends TestCase
 
         $expectedValue = [
             'type' => 'button',
-            'sub_type' => 'otp',
+            'sub_type' => 'copy_code',
             'index' => '0',
             'parameters' => [
                 [
                     'type' => 'otp',
-                    'text' => '000000'
+                    'text' => '000000',
                 ],
             ],
         ];

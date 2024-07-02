@@ -8,12 +8,12 @@ class OTPButton extends Button
     {
         $this->parameters[] = [
             'type' => 'otp',
-            'text' => $code 
+            'text' => $code,
         ];
     }
 
     public function subType(): string
     {
-        return 'otp';
+        return 'copy_code';
     }
 }
