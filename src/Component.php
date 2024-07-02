@@ -51,4 +51,9 @@ class Component
     {
         return new Component\FlowButton($token, $data);
     }
+
+    public static function otpButton(string $code): Component\OTPButton
+    {
+        return new Component\OTPButton($code);
+    }
 }

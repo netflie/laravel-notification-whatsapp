@@ -33,6 +33,13 @@ class WhatsAppTemplate
     protected array $components;
 
     /**
+     * Template header, body and buttons can be personalized with custom variable values.
+     *
+     * @link https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates See how you can personalized your templates.
+     */
+    protected string $category = null;
+
+    /**
      * The message type.
      */
     protected static string $type = 'template';
@@ -71,6 +78,13 @@ class WhatsAppTemplate
     public function language(string $language): self
     {
         $this->language = $language;
+
+        return $this;
+    }
+    
+    public function category(string $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

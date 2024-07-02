@@ -78,4 +78,12 @@ final class ComponentTest extends TestCase
 
         $this->assertInstanceOf(Component\FlowButton::class, $component);
     }
+
+    /** @test */
+    public function it_can_return_a_otp_button_component()
+    {
+        $component = Component::otpButton('000000');
+
+        $this->assertInstanceOf(Component\OTPButton::class, $component);
+    }
 }
