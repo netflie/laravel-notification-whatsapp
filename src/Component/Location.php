@@ -17,14 +17,6 @@ class Location extends Component
         $this->longitude = $longitude;
     }
 
-    // TODO: PHP 8
-    // public function __construct(
-    //     protected string $name,
-    //     protected string $address,
-    //     protected float $latitude,
-    //     protected float $longitude
-    // ) {}
-
     public function toArray(): array
     {
         return [
