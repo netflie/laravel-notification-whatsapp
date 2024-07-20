@@ -16,6 +16,7 @@ final class DocumentTest extends TestCase
             'type' => 'document',
             'document' => [
                 'link' => 'https://www.netflie.es/document.pdf',
+                'filename' => 'document',
             ],
         ];
 
