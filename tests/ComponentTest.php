@@ -56,6 +56,14 @@ final class ComponentTest extends TestCase
     }
 
     /** @test */
+    public function it_can_return_a_location_component()
+    {
+        $component = Component::location('My Place', 'Liepaja, Latvia', 56.51078, 21.00212);
+
+        $this->assertInstanceOf(Component\Location::class, $component);
+    }
+
+    /** @test */
     public function it_can_return_a_url_button_component()
     {
         $component = Component::urlButton(['event/01']);

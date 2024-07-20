@@ -51,4 +51,9 @@ class Component
     {
         return new Component\FlowButton($token, $data);
     }
+
+    public static function location(string $name, string $address, float $latitude, float $longitude): Component\Location
+    {
+        return new Component\Location($name, $address, $latitude, $longitude);
+    }
 }
