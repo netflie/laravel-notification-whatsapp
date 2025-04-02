@@ -17,7 +17,7 @@ class Component
         return new Component\DateTime($dateTime, $format);
     }
 
-    public static function document(string $link, string $filename = null): Component\Document
+    public static function document(string $link, ?string $filename = null): Component\Document
     {
         return new Component\Document($link, $filename);
     }
