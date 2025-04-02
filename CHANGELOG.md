@@ -2,6 +2,12 @@
 
 All notable changes will be documented in this file
 
+## 1.4.0 - 2025-04-02
+
+### What's Changed
+
+* Add support for Laravel 12.x
+
 ## 1.3.0 - 2024-04-29
 
 ### What's Changed
